@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pulsar Network: Your free, fast, and secure web proxy solution.">
+    <meta name="keywords" content="proxy, web proxy, Pulsar Network, unblock websites, free web proxy, proxy server">
+    <meta name="theme-color" content="#222831">
+    <meta name="googlebot" content="index, follow, snippet">
+    <meta name="robots" content="index, follow">
+    <title>Pulsar Network - Apps</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/apps.css"> <!-- Linking the new app.css -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/Pulsar Network nobg.png" alt="Pulsar Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Chat.html"><i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat</a></li>
+                <li><a href="Games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="Apps.html" class="active"><i class="fas fa-mobile-alt"></i> Apps</a></li>
+                <li><a href="Settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <section id="gameSection" class="hidden-section">
+            <h3>Choose an App</h3>
+        </section>
+
+        <!-- Button Container for Apps -->
+        <div class="btn-container">
+            <button class="btn" onclick="handleButtonClick('Apps/Advanced Code Editor 1.html')">Advanced Code Editor 1</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Advanced Code Editor 2.html')">Advanced Code Editor 2</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Calculator Algebra.html')">Calculator Algebra</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Calculator Simple.html')">Calculator Simple</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Emulators/Emulator JS/CLICK ME.html')">Emulator JS</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Emulators/Emulator WebRetro/CLICK ME.html')">Emulator WebRetro</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Ruffle/CLICK ME.html')">Ruffle</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Turbowarp/CLICK ME.html')">Turbowarp</button>
+            <button class="btn" onclick="handleButtonClick('Apps/Wordle Bot/CLICK ME.html')">Wordle Bot</button>
+
+            <!-- Iframe for App Display -->
+            <iframe id="gameFrame" frameborder="0" class="game-frame"></iframe>
+        </div>
+    </main>
+
+    <script>
+        function handleButtonClick(url) {
+            document.getElementById("gameSection").style.display = "none"; // Hide the game section
+            var gameFrame = document.getElementById("gameFrame");
+            gameFrame.style.display = "block"; // Show the iframe
+            gameFrame.style.width = "100%";    // Set width
+            gameFrame.style.height = "100%";   // Set height
+            gameFrame.src = url;               // Set the iframe source
+
+            // Hide all buttons
+            var buttons = document.querySelectorAll(".btn");
+            buttons.forEach(button => {
+                button.style.display = "none";
+            });
+        }
+    </script>
+</body>
+</html>

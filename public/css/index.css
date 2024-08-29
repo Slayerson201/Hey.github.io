@@ -1,0 +1,119 @@
+/* Basic CSS boilerplate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.nav-bar {
+    height: 80px;
+    width: 100%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+.nav-button img {
+    height: 24px;
+    width: 24px;
+}
+.nav-button:hover {
+    background: #00ADB5;
+    border-radius: 5px;
+}
+/* End Navigation Bar Styles */
+
+/* Hide iframe initially */
+.dnone {
+    display: none;
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
+.logo {
+    position: fixed;
+    top: 15px; /* Adjust as needed */
+    left: 40px; /* Adjust as needed */
+    z-index: 20; /* Ensure it stays above other elements */
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Style the main content */
+#main {
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem; /* Adjust padding for navbar */
+}
+
+/* Style the title */
+#title {
+    color: white;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+/* Style the description */
+#description {
+    color: white;
+    font-weight: 200;
+    opacity: 0.75;
+}
+
+/* Style the input (address bar) */
+#address {
+    width: 30rem;
+    height: 4rem;
+    background: #33001a;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 1rem;
+}
+
+/* Style the iframe */
+#frame {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: black;
+    outline: none;
+    border: none;
+}
