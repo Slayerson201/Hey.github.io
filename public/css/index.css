@@ -4,10 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
     height: 100vh;
     font-family: Arial, sans-serif;
+    background-color: #222831; /* Dark background for the entire site */
 }
 
 /* Navigation Bar Styles */
@@ -24,6 +26,7 @@ body {
     top: 0;
     z-index: 10;
 }
+
 .nav-button {
     color: white;
     text-decoration: none;
@@ -35,15 +38,16 @@ body {
     padding: 0.5rem 1rem;
     transition: background 0.3s;
 }
+
 .nav-button img {
     height: 24px;
     width: 24px;
 }
+
 .nav-button:hover {
     background: #00ADB5;
     border-radius: 5px;
 }
-/* End Navigation Bar Styles */
 
 /* Hide iframe initially */
 .dnone {
@@ -55,14 +59,14 @@ body {
 
 .logo {
     position: fixed;
-    top: 15px; /* Adjust as needed */
-    left: 40px; /* Adjust as needed */
-    z-index: 20; /* Ensure it stays above other elements */
+    top: 15px;
+    left: 40px;
+    z-index: 20;
 }
 
 .logo img {
-    height: 50px; /* Adjust height as needed */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px;
+    width: auto;
 }
 
 /* Style the main content */
@@ -75,7 +79,7 @@ body {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    padding-top: 4rem; /* Adjust padding for navbar */
+    padding-top: 5rem; /* Adjust padding for navbar */
 }
 
 /* Style the title */
@@ -83,6 +87,7 @@ body {
     color: white;
     font-weight: 900;
     font-size: 4rem;
+    margin-top: 1rem;
 }
 
 /* Style the description */
@@ -116,4 +121,30 @@ body {
     background: black;
     outline: none;
     border: none;
+}
+
+/* Style the button container */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Style the buttons */
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #00ADB5;
+    transform: scale(1.05);
 }

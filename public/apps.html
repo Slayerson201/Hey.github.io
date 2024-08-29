@@ -10,40 +10,37 @@
     <meta name="theme-color" content="#222831">
     <meta name="googlebot" content="index, follow, snippet">
     <meta name="robots" content="index, follow">
-    <title>Pulsar Network - Apps</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Apps - Pulsar Network</title>
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/apps.css"> <!-- Linking the new app.css -->
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/Pulsar Network nobg.png" alt="Pulsar Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Chat.html"><i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat</a></li>
-                <li><a href="Games.html"><i class="fas fa-gamepad"></i> Games</a></li>
-                <li><a href="Apps.html" class="active"><i class="fas fa-mobile-alt"></i> Apps</a></li>
-                <li><a href="Settings.html"><i class="fas fa-cog"></i> Settings</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a href="index.html" class="logo">
+        <img src="/img/Pulsar Network nobg.png" alt="Pulsar Logo">
+    </a>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-button">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="chat.html" class="nav-button">
+            <i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat
+        </a>
+        <a href="Site Folder/Games.html" class="nav-button">
+            <i class="fas fa-gamepad"></i> Games
+        </a>
+        <a href="apps.html" class="nav-button">
+            <i class="fas fa-mobile-alt"></i> Apps
+        </a>
+        <a href="Site Folder/Settings.html" class="nav-button">
+            <i class="fas fa-cog"></i> Settings
+        </a>
+    </div>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-        <section id="gameSection" class="hidden-section">
-            <h3>Choose an App</h3>
-        </section>
+    <div id="main">
+        <h1 id="title">Apps</h1>
 
-        <!-- Button Container for Apps -->
         <div class="btn-container">
             <button class="btn" onclick="handleButtonClick('Apps/Advanced Code Editor 1.html')">Advanced Code Editor 1</button>
             <button class="btn" onclick="handleButtonClick('Apps/Advanced Code Editor 2.html')">Advanced Code Editor 2</button>
@@ -54,20 +51,18 @@
             <button class="btn" onclick="handleButtonClick('Apps/Ruffle/CLICK ME.html')">Ruffle</button>
             <button class="btn" onclick="handleButtonClick('Apps/Turbowarp/CLICK ME.html')">Turbowarp</button>
             <button class="btn" onclick="handleButtonClick('Apps/Wordle Bot/CLICK ME.html')">Wordle Bot</button>
-
-            <!-- Iframe for App Display -->
-            <iframe id="gameFrame" frameborder="0" class="game-frame"></iframe>
         </div>
-    </main>
+
+        <iframe id="gameFrame" class="dnone" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
 
     <script>
         function handleButtonClick(url) {
-            document.getElementById("gameSection").style.display = "none"; // Hide the game section
             var gameFrame = document.getElementById("gameFrame");
-            gameFrame.style.display = "block"; // Show the iframe
-            gameFrame.style.width = "100%";    // Set width
-            gameFrame.style.height = "100%";   // Set height
-            gameFrame.src = url;               // Set the iframe source
+            gameFrame.classList.remove('dnone'); // Show the iframe
+            gameFrame.style.width = "100%";      // Set width
+            gameFrame.style.height = "100%";     // Set height
+            gameFrame.src = url;                 // Set the iframe source
 
             // Hide all buttons
             var buttons = document.querySelectorAll(".btn");
