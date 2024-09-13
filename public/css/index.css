@@ -3,9 +3,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+} 
+body {
+    background: linear-gradient(135deg, #3b0568, #085080, #101c86, #74193c, #421281, #a80bcf);
+    background-size: 600% 600%;
+
+    -webkit-animation: backgroundAnim 10s ease infinite;
+    -moz-animation: backgroundAnim 10s ease infinite;
+    animation: backgroundAnim 10s ease infinite;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+    padding-bottom: 60px; /* Space for footer */
+
+
+
+
 }
 
-body {
+@-webkit-keyframes backgroundAnim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes backgroundAnim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes backgroundAnim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.bodyy {
     width: 100%;
     height: 100vh;
     font-family: Arial, sans-serif;
@@ -25,9 +60,11 @@ body {
     position: fixed;
     top: 0;
     z-index: 10;
+    position:inherit;
 }
 
 .nav-button {
+    height: 100%;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
@@ -36,7 +73,8 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    transition: background 0.3s;
+    border-radius: 5px;
+
 }
 
 .nav-button img {
@@ -45,10 +83,9 @@ body {
 }
 
 .nav-button:hover {
-    background: #00ADB5;
+    background: #0077ff;
     border-radius: 5px;
 }
-
 /* Hide iframe initially */
 .dnone {
     display: none;
@@ -58,12 +95,11 @@ body {
 }
 
 .logo {
-    position: fixed;
-    top: 15px;
-    left: 40px;
-    z-index: 20;
-}
-
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    z-index: 500;
+  }
 .logo img {
     height: 50px;
     width: auto;
@@ -73,23 +109,51 @@ body {
 #main {
     width: 100%;
     height: calc(100vh - 80px); /* Adjust height to account for fixed navbar */
-    background: black;
-    display: flex;
+    background: linear-gradient(135deg, #3b0568, #085080, #101c86, #74193c, #421281, #a80bcf);
+    -webkit-animation: backgroundAnim 10s ease infinite;
+    -moz-animation: backgroundAnim 10s ease infinite;
+    animation: backgroundAnim 10s ease infinite;
+    background-attachment: fixed;
+    background-size: 600% 600%;    display: flex;
     flex-direction: column;
     gap: 2rem;
     justify-content: center;
     align-items: center;
     padding-top: 1rem; /* Adjust padding for navbar */
 }
-
+            @-webkit-keyframes backgroundAnim {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-moz-keyframes backgroundAnim {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @keyframes backgroundAnim {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
 /* Style the title */
 #title {
-    color: white;
-    font-weight: 900;
+    color: rgb(255, 255, 255);
+    font: rgb(255, 255, 255);
     font-size: 2rem;
     margin-top: 1rem;
 }
+.special{
+    text-align:center;
+    padding:10px;
+    color: #0955ed;
 
+}
+h3{
+    color: #0955ed;
+    text-align: center;
+    font-size:30px;
+}
 /* Style the description */
 #description {
     color: white;
@@ -101,7 +165,7 @@ body {
 #address {
     width: 30rem;
     height: 4rem;
-    background: #33001a;
+    background: #ffffff;
     color: white;
     outline: none;
     border: none;
@@ -141,12 +205,10 @@ body {
     border-radius: 8px;
     font-size: 1rem; /* Adjust font size */
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #00ADB5;
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 

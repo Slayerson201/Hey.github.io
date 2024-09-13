@@ -13,29 +13,57 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/AG.css">
-    <link rel="stylesheet" type="text/css" href="css/Background.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/Blank1.css">
     <link rel="stylesheet" type="text/css" href="css/Blank2.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+    <script>
+        function redirectToNewURL(event) {
+            if (event.keyCode === 221) {
+                var newURL = 'https://classroom.google.com/?pli=1';
+                
+                window.location.href = newURL;
+            }
+        }
+
+        window.addEventListener('keydown', redirectToNewURL);
+    </script>
 <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-    }
-    header {
-        background: #333; /* Adjust background color as needed */
-        color: #fff;
-        padding: 10px;
-        position: relative;
-        z-index: 1; /* Ensure it stays on top */
-    }
-    .nav-buttons {
-        display: flex;
-        justify-content: space-around;
-    }
+            body {
+                background: linear-gradient(135deg, #3b0568, #085080, #101c86, #74193c, #421281, #a80bcf);
+                background-size: 600% 600%;
+            
+                -webkit-animation: backgroundAnim 10s ease infinite;
+                -moz-animation: backgroundAnim 10s ease infinite;
+                animation: backgroundAnim 10s ease infinite;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                min-height: 100vh;
+                padding-bottom: 60px; /* Space for footer */
+
+
+
+
+            }
+
+            @-webkit-keyframes backgroundAnim {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-moz-keyframes backgroundAnim {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @keyframes backgroundAnim {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
     #gameSection {
         display: block; /* Initially visible */
     }
@@ -68,6 +96,15 @@
     .btn-container {
       position: relative;
     }
+    h3{
+        color: #ffffff;
+        text-align: center;
+        font-size:30px;
+    }
+    .nav-bar {
+        min-height: 17%;
+        max-height: 17%;
+    }
     .btn {
       background-color: #22283100;
      color: #0099ff;
@@ -92,15 +129,18 @@
 </style>
 </head>
 <body>
-<header>
-    <div class="nav-buttons">
+
+    <a href="index.html" class="logo">
+        <img src="Images/Pulsar Network nobg.png" alt="Pulsar Logo">
+    </a>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
         <a href="index.html" class="nav-button">
-          <img src="Images/Pulsar Network nobg.png" alt="Pulsar ">
-          &nbsp; Home
+            <i class="fas fa-home"></i> Home
         </a>
         <a href="chat.html" class="nav-button">
-          <i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat
-      </a>
+            <i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat
+        </a>
         <a href="games.html" class="nav-button">
             <i class="fas fa-gamepad"></i> Games
         </a>
@@ -111,338 +151,338 @@
             <i class="fas fa-cog"></i> Settings
         </a>
     </div>
-</header>
+
 <h3 id="gameSection">
 <br><br><br>
-<a href="games.html" style="text-decoration: none; color: inherit;"><u>HTML</u></a>  |  <a href="SWF games.html" style="text-decoration: none; color: inherit;">SWF</a>
+<a href="games.html" style="text-decoration: none; color: inherit;"><u>HTML</u></a>  |  <a href="SWF Games.html" style="text-decoration: none; color: inherit;">SWF</a>
 <br><br><br>
 </h3>
 
 <div class="btn-container">
 
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/1v1.lol/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/1v1.lol/CLICK ME.html')">
 <img class="imgg" src="Images/1v1.lol.png" alt="1v1.LOL"></button>       
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/2 Player Rocket League/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/2 Player Rocket League/CLICK ME.html')">
 <img class="imgg" src="Images/2 Player Rocket League.png" alt="2 Player Rocket League"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/2048/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/2048/CLICK ME.html')">
 <img class="imgg" src="Images/2048.png" alt="2048"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/2048 9007199254740992/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/2048 9007199254740992/CLICK ME.html')">
 <img class="imgg" src="Images/2048 9007199254740992.png" alt="2048 9007199254740992"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/2048 Couch/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/2048 Couch/CLICK ME.html')">
 <img class="imgg" src="Images/2048 Couch.png" alt="2048 Couch"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/2048 Doge/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/2048 Doge/CLICK ME.html')">
 <img class="imgg" src="Images/2048 Doge.png" alt="2048 Doge"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/2048 Meme/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/2048 Meme/CLICK ME.html')">
 <img class="imgg" src="Images/2048 Meme.png" alt="2048 Meme"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/2048 Reverse/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/2048 Reverse/CLICK ME.html')">
 <img class="imgg" src="Images/2048 Reverse.png" alt="2048 Reverse"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/4 Player Arcade.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/4 Player Arcade.html')">
 <img class="imgg" src="Images/4 Player Arcade.png" alt="4 Player Arcade"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/99 Balls.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/99 Balls.html')">
 <img class="imgg" src="Images/99 Balls.png" alt="99 Balls"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/A Dark Room/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/A Dark Room/CLICK ME.html')">
 <img class="imgg" src="Images/A Dark Room.png" alt="A Dark Room"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Appel.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Appel.html')">
 <img class="imgg" src="Images/Appel.png" alt="Appel"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Arrow.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Arrow.html')">
 <img class="imgg" src="Images/Arrow.png" alt="Arrow"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Asteroids/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Asteroids/CLICK ME.html')">
 <img class="imgg" src="Images/Asteroids.png" alt="Asteroids"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Asciispace.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Asciispace.html')">
 <img class="imgg" src="Images/Asciispace.png" alt="Asciispace"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Awesome Tanks.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Awesome Tanks.html')">
 <img class="imgg" src="Images/Awesome Tanks.png" alt="Awesome Tanks"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Ball Blast.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Ball Blast.html')">
 <img class="imgg" src="Images/Ball Blast.png" alt="Ball Blast"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Ball Sort Halloween/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Ball Sort Halloween/CLICK ME.html')">
 <img class="imgg" src="Images/Ball Sort Halloween.png" alt="Ball Sort Halloween"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Ball Sort Puzzle/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Ball Sort Puzzle/CLICK ME.html')">
 <img class="imgg" src="Images/Ball Sort Puzzle.png" alt="Ball Sort Puzzle"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Ball Sort Soccer/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Ball Sort Soccer/CLICK ME.html')">
 <img class="imgg" src="Images/Ball Sort Soccer.png" alt="Ball Sort Soccer"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Bee Swarm Simulator.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Bee Swarm Simulator.html')">
 <img class="imgg" src="Images/Bee Swarm Simulator.png" alt="Bee Swarm Simulator"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Bit Planes/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Bit Planes/CLICK ME.html')">
 <img class="imgg" src="Images/Bit Planes.png" alt="Bit Planes"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Bitcoin Clicker/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Bitcoin Clicker/CLICK ME.html')">
 <img class="imgg" src="Images/Bitcoin Clicker.png" alt="Bitcoin Clicker"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Black Hole Square/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Black Hole Square/CLICK ME.html')">
 <img class="imgg" src="Images/Black Hole Square.png" alt="Black Hole Square"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Blob.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Blob.html')">
 <img class="imgg" src="Images/Blob.png" alt="Blob"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Bob The Robber.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Bob The Robber.html')">
 <img class="imgg" src="Images/Bob The Robber.png" alt="Bob The Robber"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Bounce Back/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Bounce Back/CLICK ME.html')">
 <img class="imgg" src="Images/Bounce Back.png" alt="Bounce Back"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Bouncy Ninja 1.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Bouncy Ninja 1.html')">
 <img class="imgg" src="Images/Bouncy Ninja 1.png" alt="Bouncy Ninja 1"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Bouncy Ninja 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Bouncy Ninja 2.html')">
 <img class="imgg" src="Images/Bouncy Ninja 2.png" alt="Bouncy Ninja 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Break Lock/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Break Lock/CLICK ME.html')">
 <img class="imgg" src="Images/Break Lock.png" alt="Break Lock"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Captain Callisto.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Captain Callisto.html')">
 <img class="imgg" src="Images/Captain Callisto.png" alt="Captain Callisto"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Captain Rocket.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Captain Rocket.html')">
 <img class="imgg" src="Images/Captain Rocket.png" alt="Captain Rocket"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Celeste/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Celeste/CLICK ME.html')">
 <img class="imgg" src="Images/Celeste.png" alt="Celeste"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Chroma Incident/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Chroma Incident/CLICK ME.html')">
 <img class="imgg" src="Images/Chroma Incident.png" alt="Chroma Incident"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Circle O.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Circle O.html')">
 <img class="imgg" src="Images/Circle O.png" alt="Circle O"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Clear.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Clear.html')">
 <img class="imgg" src="Images/Clear.png" alt="Clear"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Climber Man.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Climber Man.html')">
 <img class="imgg" src="Images/Climber Man.png" alt="Climber Man"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Coil Master/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Coil Master/CLICK ME.html')">
 <img class="imgg" src="Images/Coil Master.png" alt="Coil Master"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Color.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Color.html')">
 <img class="imgg" src="Images/Color.png" alt="Color"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Connect 3/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Connect 3/CLICK ME.html')">
 <img class="imgg" src="Images/Connect 3.png" alt="Connect 3"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Cookie Clicker/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Cookie Clicker/CLICK ME.html')">
 <img class="imgg" src="Images/Cookie Clicker.png" alt="Cookie Clicker"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Core Ball/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Core Ball/CLICK ME.html')">
 <img class="imgg" src="Images/Core Ball.png" alt="Core Ball"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Cube Field/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Cube Field/CLICK ME.html')">
 <img class="imgg" src="Images/Cube Field.png" alt="Cube Field"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Dante.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Dante.html')">
 <img class="imgg" src="Images/Dante.png" alt="Dante"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Dino Game 1.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Dino Game 1.html')">
 <img class="imgg" src="Images/Dino Game 1.png" alt="Dino Game 1"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Dino Game 2/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Dino Game 2/CLICK ME.html')">
 <img class="imgg" src="Images/Dino Game 2.png" alt="Dino Game 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Doge Miner/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Doge Miner/CLICK ME.html')">
 <img class="imgg" src="Images/Doge Miner.png" alt="Doge Miner"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Dont Fall.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Dont Fall.html')">
 <img class="imgg" src="Images/Dont Fall.png" alt="Don't Fall"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Doodle Jump.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Doodle Jump.html')">
 <img class="imgg" src="Images/Doodle Jump.png" alt="Doodle Jump"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Drift Mania/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Drift Mania/CLICK ME.html')">
 <img class="imgg" src="Images/Drift Mania.png" alt="Drift Mania"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Drift Chase.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Drift Chase.html')">
 <img class="imgg" src="Images/Drift Chase.png" alt="Drift Chase"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Drive Mad.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Drive Mad.html')">
 <img class="imgg" src="Images/Drive Mad.png" alt="Drive Mad"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Drop The Ball 1.html')">
-<img class="imgg" src="Images/Drop The Ball 1.png" alt="Drop The Ball 1'></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Drop The Ball 2.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Drop The Ball 1.html')">
+<img class="imgg" src="Images/Drop The Ball 1.png" alt="Drop The Ball 1"></button>
+<button class="btn" onclick="Ba();HBC('HTML Games/Drop The Ball 2.html')">
 <img class="imgg" src="Images/Drop The Ball 2.png" alt="Drop The Ball 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Dungeon Raid.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Dungeon Raid.html')">
 <img class="imgg" src="Images/Dungeon Raid.png" alt="Dungeon Raid"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Dunk Shot.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Dunk Shot.html')">
 <img class="imgg" src="Images/Dunk Shot.png" alt="Dunk Shot"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Edge Not Found.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Edge Not Found.html')">
 <img class="imgg" src="Images/Edge Not Found.png" alt="Edge Not Found"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Elastic Man.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Elastic Man.html')">
 <img class="imgg" src="Images/Elastic Man.png" alt="Elastic Man"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Epic Ninja.html')">
-<img class="imgg" src="Images/Epic Ninja.png" alt="Epic Ninja'></button> 
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Evade.html')">
-<img class="imgg" src="Images/Evade.png" alt="Evade'></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Evil Glitch/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Epic Ninja.html')">
+<img class="imgg" src="Images/Epic Ninja.png" alt="Epic Ninja"></button> 
+<button class="btn" onclick="Ba();HBC('HTML Games/Evade.html')">
+<img class="imgg" src="Images/Evade.png" alt="Evade"></button>
+<button class="btn" onclick="Ba();HBC('HTML Games/Evil Glitch/CLICK ME.html')">
 <img class="imgg" src="Images/Evil Glitch.png" alt="Evil Glitch"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Falling.html')">
-<img class="imgg" src="Images/Falling.png" alt="Falling'></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Fill Infinite.html')">
-<img class="imgg" src="Images/Fill Infinite.png" alt="Fill Infinite'></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Flappy Bird/CLICK ME.html')">
-<img class="imgg" src="Images/Flappy Bird.png" alt="Flappy Bird'></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Flappy Copter/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Falling.html')">
+<img class="imgg" src="Images/Falling.png" alt="Falling"></button>
+<button class="btn" onclick="Ba();HBC('HTML Games/Fill Infinite.html')">
+<img class="imgg" src="Images/Fill Infinite.png" alt="Fill Infinite"></button>
+<button class="btn" onclick="Ba();HBC('HTML Games/Flappy Bird/CLICK ME.html')">
+<img class="imgg" src="Images/Flappy Bird.png" alt="Flappy Bird"></button>
+<button class="btn" onclick="Bl();HBC('HTML Games/Flappy Copter/CLICK ME.html')">
 <img class="imgg" src="Images/Flappy Copter.png" alt="Flappy Copter"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Fluidism/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Fluidism/CLICK ME.html')">
 <img class="imgg" src="Images/Fluidism.png" alt="Fluidism"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Geometry Dash.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Geometry Dash.html')">
 <img class="imgg" src="Images/Geometry Dash.png" alt="Geometry Dash"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Getting Over It.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Getting Over It.html')">
 <img class="imgg" src="Images/Getting Over It.png" alt="Getting Over It"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Google Snake.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Google Snake.html')">
 <img class="imgg" src="Images/Google Snake.png" alt="Google Snake"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Helix Jump/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Helix Jump/CLICK ME.html')">
 <img class="imgg" src="Images/Helix Jump.png" alt="Helix Jump"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Hextris/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Hextris/CLICK ME.html')">
 <img class="imgg" src="Images/Hextris.png" alt="Hextris"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Its Raining Boxes.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Its Raining Boxes.html')">
 <img class="imgg" src="Images/Its Raining Boxes.png" alt="It's Raining Boxes"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Johnny Upgrade.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Johnny Upgrade.html')">
 <img class="imgg" src="Images/Johnny Upgrade.png" alt="Johnny Upgrade"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Jumpy Balls.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Jumpy Balls.html')">
 <img class="imgg" src="Images/Jumpy Balls.png" alt="Jumpy Balls"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Just One Boss.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Just One Boss.html')">
 <img class="imgg" src="Images/Just One Boss.png" alt="Just One Boss"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Just Shapes And Beats.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Just Shapes And Beats.html')">
 <img class="imgg" src="Images/Just Shapes And Beats.png" alt="Just Shapes And Beats"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Konnekt/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Konnekt/CLICK ME.html')">
 <img class="imgg" src="Images/Konnekt.png" alt="Konnekt"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Laser Lord.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Laser Lord.html')">
 <img class="imgg" src="Images/Laser Lord.png" alt="Laser Lord"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Minecraft/Minecraft 1.3.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Minecraft/Minecraft 1.3.html')">
 <img class="imgg" src="Images/Minecraft 1.3.png" alt="Minecraft 1.3"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Minecraft/Minecraft 1.5.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Minecraft/Minecraft 1.5.html')">
 <img class="imgg" src="Images/Minecraft 1.5.png" alt="Minecraft 1.5"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Minecraft/Minecraft 1.8.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Minecraft/Minecraft 1.8.html')">
 <img class="imgg" src="Images/Minecraft 1.8.png" alt="Minecraft 1.8"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Minecraft/Minecraft Paper.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Minecraft/Minecraft Paper.html')">
 <img class="imgg" src="Images/Minecraft Paper.png" alt="Minecraft Paper"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Monkey Mart.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Monkey Mart.html')">
 <img class="imgg" src="Images/Monkey Mart.png" alt="Monkey Mart"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Moonwalk.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Moonwalk.html')">
 <img class="imgg" src="Images/Moonwalk.png" alt="Moonwalk"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Neon Foosball.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Neon Foosball.html')">
 <img class="imgg" src="Images/Neon Foosball.png" alt="Neon Foosball"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/N-Gon Master/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/N-Gon Master/CLICK ME.html')">
 <img class="imgg" src="Images/N-Gon Master.png" alt="N-Gon Master"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Ninja Vs. Evilcorp.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Ninja Vs. Evilcorp.html')">
 <img class="imgg" src="Images/Ninja Vs. Evilcorp.png" alt="Ninja Vs. Evilcorp"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Nitro Clash.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Nitro Clash.html')">
 <img class="imgg" src="Images/Nitro Clash.png" alt="Nitro Clash"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Not That Dead.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Not That Dead.html')">
 <img class="imgg" src="Images/Not That Dead.png" alt="Not That Dead"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Nut Simulator/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Nut Simulator/CLICK ME.html')">
 <img class="imgg" src="Images/Nut Simulator.png" alt="Nut Simulator"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Offline Paradise.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Offline Paradise.html')">
 <img class="imgg" src="Images/Offline Paradise.png" alt="Offline Paradise"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/OvO.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/OvO.html')">
 <img class="imgg" src="Images/OvO.png" alt="OvO"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Pacman Classic/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Pacman Classic/CLICK ME.html')">
 <img class="imgg" src="Images/Pacman Classic.png" alt="Pacman Classic"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Packabunchas.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Packabunchas.html')">
 <img class="imgg" src="Images/Packabunchas.png" alt="Packabunchas"></button>
-<button class="btn" onclick="Ba();HBC('File Games/HTML Games/Paperclips/CLICK ME.html')">
+<button class="btn" onclick="Ba();HBC('HTML Games/Paperclips/CLICK ME.html')">
 <img class="imgg" src="Images/Paperclips.png" alt="Paperclips"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Paper.io 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Paper.io 2.html')">
 <img class="imgg" src="Images/Paper.io 2.png" alt="Paper.io 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Paper.io 3D.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Paper.io 3D.html')">
 <img class="imgg" src="Images/Paper.io 3D.png" alt="Paper.io 3D"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Phantom Dash.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Phantom Dash.html')">
 <img class="imgg" src="Images/Phantom Dash.png" alt="Phantom Dash"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Planetesimals/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Planetesimals/CLICK ME.html')">
 <img class="imgg" src="Images/Planetesimals.png" alt="Planetesimals"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Plantale.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Plantale.html')">
 <img class="imgg" src="Images/Plantale.png" alt="Plantale"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Pong/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Pong/CLICK ME.html')">
 <img class="imgg" src="Images/Pong.png" alt="Pong"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Pop The Lock 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Pop The Lock 2.html')">
 <img class="imgg" src="Images/Pop The Lock 2.png" alt="Pop The Lock 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Push Back/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Push Back/CLICK ME.html')">
 <img class="imgg" src=" Images/Push Back.png" alt=" Push Back"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Racer/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Racer/CLICK ME.html')">
 <img class="imgg" src=" Images/Racer.png" alt=" Racer"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Radius Raid/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Radius Raid/CLICK ME.html')">
 <img class="imgg" src=" Images/Radius Raid.png" alt=" Radius Raid"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Recoil.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Recoil.html')">
 <img class="imgg" src=" Images/Recoil.png" alt=" Recoil"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Reload.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Reload.html')">
 <img class="imgg" src=" Images/Reload.png" alt=" Reload"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Retro Bowl.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Retro Bowl.html')">
 <img class="imgg" src=" Images/Retro Bowl.png" alt=" Retro Bowl"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Retro Haunt/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Retro Haunt/CLICK ME.html')">
 <img class="imgg" src=" Images/Retro Haunt.png" alt=" Retro Haunt"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Rise Higher/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Rise Higher/CLICK ME.html')">
 <img class="imgg" src=" Images/Rise Higher.png" alt=" Rise Higher"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Roadblocks/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Roadblocks/CLICK ME.html')">
 <img class="imgg" src=" Images/Roadblocks.png" alt=" Roadblocks"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Rocket.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Rocket.html')">
 <img class="imgg" src=" Images/Rocket.png" alt=" Rocket"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Rolling Forests.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Rolling Forests.html')">
 <img class="imgg" src=" Images/Rolling Forests.png" alt=" Rolling Forests"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Rope Slide 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Rope Slide 2.html')">
 <img class="imgg" src=" Images/Rope Slide 2.png" alt=" Rope Slide 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Sand Game.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Sand Game.html')">
 <img class="imgg" src=" Images/Sand Game.png" alt=" Sand Game"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Sausage Run.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Sausage Run.html')">
 <img class="imgg" src=" Images/Sausage Run.png" alt=" Sausage Run"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Scratch Brawl 1.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Scratch Brawl 1.html')">
 <img class="imgg" src=" Images/Scratch Brawl 1.png" alt=" Scratch Brawl 1"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Scratch Brawl 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Scratch Brawl 2.html')">
 <img class="imgg" src=" Images/Scratch Brawl 2.png" alt=" Scratch Brawl 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Shuttle Deck.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Shuttle Deck.html')">
 <img class="imgg" src=" Images/Shuttle Deck.png" alt=" Shuttle Deck"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Slime Ninja.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Slime Ninja.html')">
 <img class="imgg" src=" Images/Slime Ninja.png" alt=" Slime Ninja"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Sling Drift.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Sling Drift.html')">
 <img class="imgg" src=" Images/Sling Drift.png" alt=" Sling Drift"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Slope.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Slope.html')">
 <img class="imgg" src=" Images/Slope.png" alt=" Slope"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Smove.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Smove.html')">
 <img class="imgg" src=" Images/Smove.png" alt=" Smove"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Snail Platformer.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Snail Platformer.html')">
 <img class="imgg" src=" Images/Snail Platformer.png" alt=" Snail Platformer"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Space Company/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Space Company/CLICK ME.html')">
 <img class="imgg" src=" Images/Space Company.png" alt=" Space Company"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Space Garden.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Space Garden.html')">
 <img class="imgg" src=" Images/Space Garden.png" alt=" Space Garden"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Space Huggers.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Space Huggers.html')">
 <img class="imgg" src=" Images/Space Huggers.png" alt=" Space Huggers"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Stack.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Stack.html')">
 <img class="imgg" src=" Images/Stack.png" alt=" Stack"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Stickman Climb 1.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Stickman Climb 1.html')">
 <img class="imgg" src=" Images/Stickman Climb 1.png" alt=" Stickman Climb 1"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Stickman Climb 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Stickman Climb 2.html')">
 <img class="imgg" src=" Images/Stickman Climb 2.png" alt=" Stickman Climb 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Stunt Cars 2/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Stunt Cars 2/CLICK ME.html')">
 <img class="imgg" src=" Images/Stunt Cars 2.png" alt=" Stunt Cars 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Suika Game (Watermelon Game).html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Suika Game (Watermelon Game).html')">
 <img class="imgg" src=" Images/Suika Game (Watermelon Game).png" alt=" Suika Game (Watermelon Game)"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Super Fowlest.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Super Fowlest.html')">
 <img class="imgg" src=" Images/Super Fowlest.png" alt=" Super Fowlest"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Super Scratch Bros.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Super Scratch Bros.html')">
 <img class="imgg" src=" Images/Super Scratch Bros.png" alt=" Super Scratch Bros"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Super Stickman Golf/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Super Stickman Golf/CLICK ME.html')">
 <img class="imgg" src=" Images/Super Stickman Golf.png" alt=" Super Stickman Golf"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Tappy Tadpole.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Tappy Tadpole.html')">
 <img class="imgg" src=" Images/Tappy Tadpole.png" alt=" Tappy Tadpole"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Tiny Fishing.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Tiny Fishing.html')">
 <img class="imgg" src=" Images/Tiny Fishing.png" alt=" Tiny Fishing"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Temple Leap.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Temple Leap.html')">
 <img class="imgg" src=" Images/Temple Leap.png" alt=" Temple Leap"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Terraria.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Terraria.html')">
 <img class="imgg" src=" Images/Terraria.png" alt=" Terraria"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Territorial.io.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Territorial.io.html')">
 <img class="imgg" src=" Images/Territorial.io.png" alt=" Territorial.io"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja 1.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja 1.html')">
 <img class="imgg" src=" Images/The Ninja 1.png" alt=" The Ninja 1"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja 2.html')">
 <img class="imgg" src=" Images/The Ninja 2.png" alt=" The Ninja 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja 3.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja 3.html')">
 <img class="imgg" src=" Images/The Ninja 3.png" alt=" The Ninja 3"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja 4.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja 4.html')">
 <img class="imgg" src=" Images/The Ninja 4.png" alt=" The Ninja 4"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja 5 Hacked.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja 5 Hacked.html')">
 <img class="imgg" src=" Images/The Ninja 5 Hacked.png" alt=" The Ninja 5 Hacked"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja 5.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja 5.html')">
 <img class="imgg" src=" Images/The Ninja 5.png" alt=" The Ninja 5"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja Level Creator.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja Level Creator.html')">
 <img class="imgg" src=" Images/The Ninja Level Creator.png" alt=" The Ninja Level Creator"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja Master Hacked.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja Master Hacked.html')">
 <img class="imgg" src=" Images/The Ninja Master Hacked.png" alt=" The Ninja Master Hacked"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/The Ninja Master.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/The Ninja Master.html')">
 <img class="imgg" src=" Images/The Ninja Master.png" alt=" The Ninja Master"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Time Shooter 2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Time Shooter 2.html')">
 <img class="imgg" src=" Images/Time Shooter 2.png" alt=" Time Shooter 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Time Shooter 3.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Time Shooter 3.html')">
 <img class="imgg" src=" Images/Time Shooter 3.png" alt=" Time Shooter 3"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Tomb Of The Mask.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Tomb Of The Mask.html')">
 <img class="imgg" src=" Images/Tomb Of The Mask.png" alt=" Tomb Of The Mask"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Tower Master/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Tower Master/CLICK ME.html')">
 <img class="imgg" src=" Images/Tower Master.png" alt=" Tower Master"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Trimps/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Trimps/CLICK ME.html')">
 <img class="imgg" src=" Images/Trimps.png" alt=" Trimps"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Tube Jumpers.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Tube Jumpers.html')">
 <img class="imgg" src=" Images/Tube Jumpers.png" alt=" Tube Jumpers"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Tunnel Rush.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Tunnel Rush.html')">
 <img class="imgg" src=" Images/Tunnel Rush.png" alt=" Tunnel Rush"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Twisted Mind.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Twisted Mind.html')">
 <img class="imgg" src=" Images/Twisted Mind.png" alt=" Twisted Mind"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Water Sort.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Water Sort.html')">
 <img class="imgg" src=" Images/Water Sort.png" alt=" Water Sort"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Weavesilk/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Weavesilk/CLICK ME.html')">
 <img class="imgg" src=" Images/Weavesilk.png" alt=" Weavesilk"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Wordle.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Wordle.html')">
 <img class="imgg" src=" Images/Wordle.png" alt=" Wordle"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/Worlds Hardest Game 2/CLICK ME.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/Worlds Hardest Game 2/CLICK ME.html')">
 <img class="imgg" src=" Images/Worlds Hardest Game 2.png" alt=" Worlds Hardest Game 2"></button>
-<button class="btn" onclick="Bl();HBC('File Games/HTML Games/xx142-b2.html')">
+<button class="btn" onclick="Bl();HBC('HTML Games/xx142-b2.html')">
 <img class="imgg" src=" Images/xx142-b2.exe.png" alt=" xx142-b2.exe"></button>
 
         
