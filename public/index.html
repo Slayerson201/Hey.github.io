@@ -35,6 +35,9 @@
     </script>
 </head>
 <body>
+    <div class="custom-cursor" id="customCursor">
+
+    </div>
     <a href="index.html" class="logo">
         <img src="Images/Pulsar Network nobg.png" alt="Pulsar Logo">
     </a>
@@ -59,7 +62,7 @@
 
     <div id="main">
         <!-- Title -->
-        <h1 id="title">Pulsar</h1>
+        <h1 id="stitle">Pulsar</h1>
         <!-- Description -->
         <p id="description">A barebones example from MotorTruck1221's guide "Creating a proxy frontend from scratch"</p>
         <!-- Search bar -->
@@ -97,5 +100,26 @@
             }
         });
     </script>
+        <script>
+            const customCursor = document.getElementById('customCursor');
+            const spikes = document.getElementById('spikes');
+    
+            document.addEventListener('mousemove', (e) => {
+                customCursor.style.left = `${e.pageX}px`;
+                customCursor.style.top = `${e.pageY}px`;
+            });
+    
+            // Show spikes on hover
+            const hoverElements = document.querySelectorAll('.nav-button');
+    
+            hoverElements.forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    spikes.classList.add('visible');
+                });
+                element.addEventListener('mouseleave', () => {
+                    spikes.classList.remove('visible');
+                });
+            });
+        </script>
 </body>
 </html>

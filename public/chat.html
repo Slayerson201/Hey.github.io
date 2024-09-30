@@ -18,96 +18,67 @@
     <link rel="stylesheet" type="text/css" href="css/Blank1.css">
     <link rel="stylesheet" type="text/css" href="css/Blank2.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.png">
-    <script>
-        function redirectToNewURL(event) {
-            if (event.keyCode === 221) {
-                var newURL = 'https://classroom.google.com/?pli=1';
-                
-                window.location.href = newURL;
-            }
-        }
-
-        window.addEventListener('keydown', redirectToNewURL);
-    </script>
-    <style>
-            .nav-bar {
-        min-height: 17%;
-        max-height: 17%;
-    }
-    </style>
-    </head>
-    <body>
-        <a href="index.html" class="logo">
-            <img src="Images/Pulsar Network nobg.png" alt="Pulsar Logo">
-        </a>
-        <!-- Navigation Bar -->
-        <div class="nav-bar">
-            <a href="index.html" class="nav-button">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <a href="chat.html" class="nav-button">
-                <i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat
-            </a>
-            <a href="games.html" class="nav-button">
-                <i class="fas fa-gamepad"></i> Games
-            </a>
-            <a href="apps.html" class="nav-button">
-                <i class="fas fa-mobile-alt"></i> Apps
-            </a>
-            <a href="settings.html" class="nav-button">
-                <i class="fas fa-cog"></i> Settings
-            </a>
+</head>
+<body>
+    <div class="custom-cursor" id="customCursor">
+        <div class="spikes" id="spikes">
+            <div class="spike"></div>
+            <div class="spike"></div>
+            <div class="spike"></div>
+            <div class="spike"></div>
+            <div class="spike"></div>
+            <div class="spike"></div>
+            <div class="spike"></div>
+            <div class="spike"></div>
         </div>
-        <script>
-        function createwprxy() {
-            
-            var urlObj = new window.URL(window.location.href);
-        var url = "https://hjctvr-8080.csb.app/service/gateway?url="+document.getElementById("prxy");
+    </div>
 
-        if (url) {
-            var win;
+    <a href="index.html" class="logo">
+        <img src="Images/Pulsar Network nobg.png" alt="Pulsar Logo">
+    </a>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-button">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="chat.html" class="nav-button">
+            <i class="fas fa-comment-dots fa-flip-horizontal"></i> Chat
+        </a>
+        <a href="games.html" class="nav-button">
+            <i class="fas fa-gamepad"></i> Games
+        </a>
+        <a href="apps.html" class="nav-button">
+            <i class="fas fa-mobile-alt"></i> Apps
+        </a>
+        <a href="settings.html" class="nav-button">
+            <i class="fas fa-cog"></i> Settings
+        </a>
+    </div>
 
-            document.querySelector('button').onclick = function() {
-                if (win) {
-                    win.focus();
-                } else {
-                    win = window.open();
-                    win.document.body.style.margin = '0';
-                    win.document.body.style.height = '100vh';
-                    var iframe = win.document.createElement('iframe');
-                    iframe.style.border = 'none';
-                    iframe.style.width = '100%';
-                    iframe.style.height = '100%';
-                    iframe.style.margin = '0';
-                    iframe.src = url;
-                    win.document.body.appendChild(iframe);
-                    
+    <script>
+        const customCursor = document.getElementById('customCursor');
+        const spikes = document.getElementById('spikes');
 
-                    var interval = setInterval(function() {
-                        if (win.closed) {
-                            clearInterval(interval);
-                            win = undefined;
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = `${e.pageX}px`;
+            customCursor.style.top = `${e.pageY}px`;
+        });
 
-                        }
-                    }, 500);
+        // Show spikes on hover
+        const hoverElements = document.querySelectorAll('.nav-button');
 
+        hoverElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                spikes.classList.add('visible');
+            });
+            element.addEventListener('mouseleave', () => {
+                spikes.classList.remove('visible');
+            });
+        });
+    </script>
 
-                }
-            };
-        }
-
-        }
-        </script>
-
-
-<br><br><br><br><br>
-		<l <input placeholder="" id='none' class="text-field" autofocus>
-
-        <h3> As of right now the chat room is not set up. <h3>
-
-<br>
-<br>
-<br>
-    </body>
+    <br><br><br><br><br>
+    <h3> As of right now the chat room is not set up. </h3>
+    <br><br><br>
+</body>
 </html>
-
