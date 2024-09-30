@@ -4,13 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 } 
-body {
-    background: linear-gradient(135deg, #3b0568, #085080, #101c86, #74193c, #421281, #a80bcf);
-    background-size: 600% 600%;
 
-    -webkit-animation: backgroundAnim 10s ease infinite;
-    -moz-animation: backgroundAnim 10s ease infinite;
-    animation: backgroundAnim 10s ease infinite;
+body {
+
+    background: linear-gradient(135deg, #000000, #1b043a, #1a1342); /* Darker blue gradient */
+    background-size: 300% 300%;
+
+    -webkit-animation: backgroundAnim 60s ease infinite;
+    -moz-animation: backgroundAnim 60s ease infinite;
+    animation: backgroundAnim 60s ease infinite;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     display: flex;
@@ -86,6 +88,72 @@ body {
     background: #0077ff;
     border-radius: 5px;
 }
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #393e46; /* Track color */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0077ff; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0077ff; /* Change thumb color on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* Make scrollbar thinner */
+    scrollbar-color: #0077ff #393e46; /* Thumb and track color */
+}
+
+/* For IE and Edge */
+body {
+    -ms-overflow-style: scrollbar; /* Enable scrollbar styling */
+}
+body {
+    cursor: none !important; /* Hide default cursor */
+    margin: 0;
+}
+
+.custom-cursor {
+    display: none; /* Hide custom cursor by default */
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8), 0 0 10px rgba(0, 123, 255, 0.5), 0 0 15px rgba(0, 123, 255, 0.3); /* Blue glowing border */
+}
+
+body:hover .custom-cursor {
+    display: block; /* Show custom cursor on hover */
+}
+
+
+
+
+.nav-bar {
+    min-height: 17%;
+    max-height: 17%;
+}
+
+/* Ensure all elements also have no cursor */
+* {
+    cursor: none !important; /* Hide default cursor on all elements */
+}
+
+
 /* Hide iframe initially */
 .dnone {
     display: none;
@@ -107,35 +175,58 @@ body {
 
 /* Style the main content */
 #main {
+    position: relative;
     width: 100%;
     height: calc(100vh - 80px); /* Adjust height to account for fixed navbar */
-    background: linear-gradient(135deg, #3b0568, #085080, #101c86, #74193c, #421281, #a80bcf);
-    -webkit-animation: backgroundAnim 10s ease infinite;
-    -moz-animation: backgroundAnim 10s ease infinite;
-    animation: backgroundAnim 10s ease infinite;
+    background: linear-gradient(135deg, #000000, #1b043a, #1a1342); /* Darker blue gradient */
+    -webkit-animation: backgroundAnim 60s ease infinite;
+    -moz-animation: backgroundAnim 60s ease infinite;
+    animation: backgroundAnim 60s ease infinite;
     background-attachment: fixed;
-    background-size: 600% 600%;    display: flex;
+    background-size: 300% 300%;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     justify-content: center;
     align-items: center;
     padding-top: 1rem; /* Adjust padding for navbar */
 }
-            @-webkit-keyframes backgroundAnim {
-                0%{background-position:0% 50%}
-                50%{background-position:100% 50%}
-                100%{background-position:0% 50%}
-            }
-            @-moz-keyframes backgroundAnim {
-                0%{background-position:0% 50%}
-                50%{background-position:100% 50%}
-                100%{background-position:0% 50%}
-            }
-            @keyframes backgroundAnim {
-                0%{background-position:0% 50%}
-                50%{background-position:100% 50%}
-                100%{background-position:0% 50%}
-            }
+
+#title {
+    position: relative;
+    font-size: 3rem; /* Adjust as necessary */
+    color: #ffffff; /* Text color */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Subtle glow */
+}
+
+#stitle {
+    font-size: 3rem; /* Adjust as necessary */
+    color: #ffffff; /* Text color */
+    text-shadow: 
+        0 0 5px rgba(7, 105, 234, 0.8), /* Inner glow */
+        0 0 10px rgba(7, 105, 234, 0.5), /* Middle glow */
+        0 0 20px rgba(7, 105, 234, 0.3); /* Outer glow */
+    animation: glowFadeAnim 3s ease-in-out infinite alternate; /* Combined animation */
+}
+
+@keyframes glowFadeAnim {
+    0% { 
+        opacity: 1; 
+        text-shadow: 
+            0 0 5px rgba(7, 105, 234, 0.8), 
+            0 0 10px rgba(7, 105, 234, 0.5), 
+            0 0 20px rgba(7, 105, 234, 0.3); 
+    }
+    100% { 
+        opacity: 0.05; /* Fade out */
+        text-shadow: 
+            0 0 10px rgb(0, 0, 0), 
+            0 0 30px rgba(0, 0, 0, 0.7), 
+            0 0 80px rgba(0, 0, 0, 0.5); /* Increased glow */
+    }
+}
+
+
 /* Style the title */
 #title {
     color: rgb(255, 255, 255);
@@ -164,9 +255,9 @@ h3{
 /* Style the input (address bar) */
 #address {
     width: 30rem;
-    height: 4rem;
+    height: 3rem;
     background: #ffffff;
-    color: white;
+    color: rgb(0, 0, 0);
     outline: none;
     border: none;
     padding: 14px;
