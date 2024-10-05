@@ -69,6 +69,8 @@
         <input id="address" type="text" placeholder="Search..." />
         <!-- iframe where the content will be loaded -->
         <iframe id="frame" class="dnone"></iframe>
+        <input type="submit" value="Go">
+        <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden">
     </div>
 
     <script>
@@ -121,5 +123,7 @@
                 });
             });
         </script>
+         <script src="scripts.js"></script>
+        <script>const url = search(address.value, searchEngine.value); </script>
 </body>
 </html>

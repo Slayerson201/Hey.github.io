@@ -1,52 +1,56 @@
-//Import express, http and wisp
+// Import express, http, and wisp
 import http from 'node:http';
 import express from 'express';
 import wisp from 'wisp-server-node';
 import path from 'node:path';
+import { fileURLToPath } from 'url';
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
-import { baremuxPath } from "@mercuryworkshop/bare-mux/node"; //Note how we are using /node at the end of this import. This provides the correct types when using TypeScript.
+import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 
-//create the express "app"
+// Get current file path and directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Create the express "app"
 const app = express();
-//create an http server
+
+// Create an HTTP server
 const httpServer = http.createServer();
-//define the port to listen on
-//change this to your liking!
+
+// Define the port to listen on
 const port = 8080;
 
-app.use(express.static(path.join(import.meta.dirname, "public" /* This is the folder you created with the index.html file in it */)));
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, "public")));
 
-// "/uv/" is where the uv files will be available from. uvPath is just where those files are located
+// Serve UV, baremux, and epoxy files
 app.use("/uv/", express.static(uvPath));
-// "/baremux/" is where the bare-mux files will be available from. baremuxPath is just where those files are located
 app.use("/baremux/", express.static(baremuxPath));
-// "/epoxy/" is where the epoxy files will be served from. epoxyPath is just the location to those files.
 app.use("/epoxy/", express.static(epoxyPath));
 
-//listen for requests on the http server.
+// Listen for requests on the HTTP server
 httpServer.on('request', (req, res) => {
-    //make express handle all of the requests
-    app(req, res)
+    // Make express handle all of the requests
+    app(req, res);
 });
 
-//listen for websocket upgrades on the http server
+// Listen for WebSocket upgrades on the HTTP server
 httpServer.on('upgrade', (req, socket, head) => {
     if (req.url.endsWith('/wisp/')) {
-        //route the request to the wisp server if the url ends in /wisp/
+        // Route the request to the wisp server if the URL ends in /wisp/
         wisp.routeRequest(req, socket, head);
-    }
-    else {
+    } else {
         socket.end();
     }
 });
 
-//when the server is ready, console.log that it is ready
+// When the server is ready, log that it is ready
 httpServer.on('listening', () => {
     console.log(`Server listening on http://localhost:${port}`);
 });
 
-//start the http server
+// Start the HTTP server
 httpServer.listen({
     port: port 
 });
