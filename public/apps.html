@@ -165,13 +165,14 @@
         }
     </script>
     <script>
-        function HBC(url) {
-            var gameSection = document.getElementById("gameSection");
-            gameSection.style.display = "none"; // Hide the game section
-            var gameFrame = document.getElementById("gameFrame");
-            gameFrame.style.display = "block"; // Show the iframe
-            gameFrame.src = url;               // Set the iframe source
-        }
+    function HBC(url) {
+        var gameSection = document.getElementById("gameSection");
+        gameSection.style.display = "none"; // Hide the game section
+        var gameFrame = document.getElementById("gameFrame");
+        gameFrame.style.display = "block"; // Show the iframe
+        gameFrame.src = url;               // Set the iframe source
+        customCursor.style.display = 'none'; // Show the cursor on mouse move
+    }
     </script>
     <script>
         const customCursor = document.getElementById('customCursor');
